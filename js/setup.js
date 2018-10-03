@@ -74,7 +74,6 @@ similarListElement.appendChild(fragment);
 // show wizards setup section
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
 
-
 // Event handlers
 
 var ESC_KEYCODE = 27;
@@ -90,6 +89,8 @@ var onPopupEscPress = function (evt) {
 };
 
 var openPopup = function () {
+  userDialog.style.top = '80px';
+  userDialog.style.left = '50%';
   userDialog.classList.remove('hidden');
   document.addEventListener('keydown', onPopupEscPress);
 };
@@ -118,6 +119,7 @@ setupClose.addEventListener('keydown', function (evt) {
     closePopup();
   }
 });
+
 
 var userNameInput = userDialog.querySelector('.setup-user-name');
 userNameInput.addEventListener('focus', function () {
